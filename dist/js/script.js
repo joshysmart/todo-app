@@ -40,7 +40,6 @@ function addItem(e) {
  const todoItemValue = e.target.value;
  todoItemsStorage = [];
  todoItemsStorage.push([todoItemValue, false]);
- localStorage.setItem('item', JSON.stringify(todoItemsStorage));
  updateList(todoItemsStorage);
  e.target.value = '';
  showAllButton.click();

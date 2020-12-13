@@ -156,6 +156,34 @@
     position: relative;
     cursor: url('../images/cursor.svg'), auto;
     user-select: none;
+
+    &:hover {
+     .checked::before {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      content: '';
+      background-image: $Check-Background;
+      border-radius: 50%;
+     }
+     .checked::after {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      background: $Very-Dark-Desaturate-Blue;
+     }
+
+     input:checked ~ .checked {
+      &::before {
+       z-index: -30;
+      }
+      &::after {
+       z-index: -30;
+      }
+     }
+    }
     
     .checked {
      width: 22px;
@@ -184,24 +212,6 @@
      }
      
      @include media-xl {
-      &:hover {
-       &::before {
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        content: '';
-        background-image: $Check-Background;
-        border-radius: 50%;
-       }
-       &::after {
-        width: 22px;
-        height: 22px;
-        position: absolute;
-        content: '';
-        border-radius: 50%;
-        background: $Very-Dark-Desaturate-Blue;
-       }
-      }
      }
 
      img {
@@ -239,14 +249,6 @@
       background-repeat: no-repeat;
       background-size: contain;
 
-      &:hover {
-       &::before {
-        z-index: -30;
-       }
-       &::after {
-        z-index: -30;
-       }
-      }
       img {
        opacity: 1;
       }
