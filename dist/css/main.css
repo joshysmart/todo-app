@@ -221,10 +221,12 @@
 }
 
 .todo-section .new-todo label input {
+  width: 100%;
   color: #cacde8;
   font-size: .7rem;
   background: 0;
   border: 0;
+  outline: 0;
   padding: 1rem 3.3rem;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;

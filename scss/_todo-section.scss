@@ -48,10 +48,12 @@
   label { 
    position: relative;
    input {
+    width: 100%;
     color: $Light-Grayish-Blue;
     font-size: .7rem;
     background: 0;
     border: 0;
+    outline: 0;
     padding: 1rem 3.3rem;
     transition: all .4s ease-in-out;
 
