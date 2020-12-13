@@ -17,19 +17,31 @@ Todo App Add Item
 ======= ======== */
 const todoTextBox = document.querySelector('#create-todo');
 const todoWrapper = document.querySelector('.todo-wrapper');
+let todoItemsStorage = JSON.parse(localStorage.getItem('item')) || [ ["Complete online Javascript course", true], ["Jog around the park 3x", false], ["10 minute meditation", false], ["Read for 1 hour", false], ["Pick up groceries", false], ["Complete Todo app on Frontend Mentor", false]
+];
+
+function updateList(todoItems) {
+ todoItems.forEach(todoItem => {
+  const todoElement = document.createElement('div');
+  todoElement.classList.add('todo-item');
+  todoElement.innerHTML = `
+   <label for="">
+    <input type="checkbox" name="item" id="" class="item" ${todoItem[1] && "checked"}>  <span class="text">${todoItem[0]}</span> 
+    <span class="checked"><img src="./images/icon-check.svg" alt=""></span>
+   </label>
+   <div class="close"><img src="./images/icon-cross.svg" alt=""></div>
+  `;
+  todoWrapper.appendChild(todoElement);
+ }); 
+}
+updateList(todoItemsStorage);
 
 function addItem(e) {
  const todoItemValue = e.target.value;
- const todoElement = document.createElement('div');
- todoElement.classList.add('todo-item');
- todoElement.innerHTML = `
-  <label for="">
-  <input type="checkbox" name="item" id="" class="item">  <span class="text">${todoItemValue}</span> 
-  <span class="checked"><img src="./images/icon-check.svg" alt=""></span>
-  </label>
-  <div class="close"><img src="./images/icon-cross.svg" alt=""></div>
- `;
- todoWrapper.appendChild(todoElement);
+ todoItemsStorage = [];
+ todoItemsStorage.push([todoItemValue, false]);
+ localStorage.setItem('item', JSON.stringify(todoItemsStorage));
+ updateList(todoItemsStorage);
  e.target.value = '';
  showAllButton.click();
  initItems();
@@ -90,9 +102,9 @@ function showAll(e) {
 
 showAllButton.addEventListener('click', showAll);
 
-/* ===================
+/* ======================
 Todo Show Completed Items
-========= ========== */
+=========== =========== */
 
 const showCompletedButton = document.querySelector('.show-completed');
 
@@ -128,12 +140,12 @@ function showActive(e) {
 
  
  todoItemInputs.forEach((todoItemInput, i) => {
-  todoItems[i].classList.remove('display');
-
-  if (todoItemInput.checked) {
-    todoItems[i].classList.add('display');
-  }
- });
+   todoItems[i].classList.remove('display');
+   
+   if (todoItemInput.checked) {
+     todoItems[i].classList.add('display');
+    }
+  });
 }
 
 showActiveButton.addEventListener('click', showActive);
@@ -143,30 +155,38 @@ Todo App Init Items
 ======= ========== */
 
 function initItems() {
+ todoItemsStorage = [];
+ localStorage.setItem('item', JSON.stringify(todoItemsStorage));
+  
  const todoItems = todoWrapper.querySelectorAll('.todo-item');
  const itemsCount = document.querySelector('.items-count');
  const closeButtons = todoWrapper.querySelectorAll('.close');
  
  closeButtons.forEach(closeButton => closeButton.addEventListener('click', removeItem));
-
+ 
  todoItems.forEach((todoItem, i) => {
-  todoItem.setAttribute('draggable', true);
+   todoItem.setAttribute('draggable', true);
   todoItem.addEventListener('dragstart', (e) => {
-   e.target.classList.add('dragging'); 
+    e.target.classList.add('dragging'); 
   }); 
   todoItem.addEventListener('dragend', (e) => {
-   e.target.classList.remove('dragging'); 
+    e.target.classList.remove('dragging'); 
   }); 
-
+  
   const todoItemLabel = todoItem.querySelector('label');
   const todoItemInput = todoItem.querySelector('input');
+  const todoItemText = todoItem.querySelector('.text');
   
+  todoItemsStorage.push([todoItemText.innerText, todoItemInput.checked]);
+  localStorage.setItem('item', JSON.stringify(todoItemsStorage));
+
   todoItemLabel.setAttribute("for", `item${i}`)
   todoItemInput.setAttribute("id", `item${i}`)
  })
 
  const todoItemInputs = todoWrapper.querySelectorAll('.item');
  const checkedInputs = todoWrapper.querySelectorAll('.item:checked');
+
  const noOfUncheckedItems = todoItemInputs.length - checkedInputs.length;
 
  itemsCount.textContent = `${noOfUncheckedItems} item${noOfUncheckedItems > 1 ? 's' : ''} left`
@@ -176,6 +196,10 @@ function initItems() {
  return {checkedInputs,todoItemInputs, todoItems};
 };
 initItems();
+
+/* =================
+Todo App Reoder Items
+======= ========== */
 
 function reoderElement(e) {
  const afterElement = getAfterElement(e.clientY);
