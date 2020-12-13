@@ -410,15 +410,16 @@
 
 
    label { 
-    .checked {
-     border: 1px solid $Light-Grayish-Blue-Light;
-     @include media-xl {
-      &:hover {
-       &::after {
-        background: $Very-Light-Gray;
-       }
+
+    @include media-xl {
+     &:hover {
+      .checked::after {
+       background: $Very-Light-Gray;
       }
      }
+    }
+    .checked {
+     border: 1px solid $Light-Grayish-Blue-Light;
     }
     .text {
      color: $Very-Dark-Grayish-Blue_Light;

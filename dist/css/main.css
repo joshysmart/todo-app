@@ -647,14 +647,14 @@
   background: #f0f0f0;
 }
 
-.todo-section-light .todo-list .todo-item label .checked {
-  border: 1px solid #d2d3db;
-}
-
 @media only screen and (min-width: 1280px) {
-  .todo-section-light .todo-list .todo-item label .checked:hover::after {
+  .todo-section-light .todo-list .todo-item label:hover .checked::after {
     background: #fafafa;
   }
+}
+
+.todo-section-light .todo-list .todo-item label .checked {
+  border: 1px solid #d2d3db;
 }
 
 .todo-section-light .todo-list .todo-item label .text {
