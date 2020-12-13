@@ -136,6 +136,7 @@
    user-select: none;
    border-bottom: 1px solid $Very-Dark-Grayish-Blue;
    background: $Very-Dark-Desaturate-Blue;
+   outline: 0;
 
    @include media-md {
     padding: 1.2rem 0;
@@ -155,7 +156,6 @@
     position: relative;
     cursor: url('../images/cursor.svg'), auto;
     user-select: none;
-
     
     .checked {
      width: 22px;
@@ -232,6 +232,7 @@
     input {
      height: 100%;
      opacity: 0;
+     outline: 0;
      
      &:checked ~ .checked {
       background-image: $Check-Background;

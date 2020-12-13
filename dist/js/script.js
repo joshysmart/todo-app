@@ -178,7 +178,7 @@ function initItems() {
 
  return {checkedInputs,todoItemInputs, todoItems};
 };
-initItems()
+initItems();
 
 function reoderElement(e) {
  const afterElement = getAfterElement(e.clientY);

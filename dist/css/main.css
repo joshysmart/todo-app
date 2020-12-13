@@ -331,6 +331,7 @@
           user-select: none;
   border-bottom: 1px solid #393a4c;
   background: #25273c;
+  outline: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -451,6 +452,7 @@
 .todo-section .todo-list .todo-item label input {
   height: 100%;
   opacity: 0;
+  outline: 0;
 }
 
 .todo-section .todo-list .todo-item label input:checked ~ .checked {
