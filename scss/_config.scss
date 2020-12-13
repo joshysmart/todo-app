@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+// Primary
+$Bright-Blue: hsl(220, 98%, 61%);
+$Check-Background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+// Light Theme
+$Very-Light-Gray: #fafafa;
+$Very-Light-Grayish-Blue: #e4e5f1;
+$Light-Grayish-Blue-Light: #d2d3db;
+$Dark-Grayish-Blue-Light: #9394a5;
+$Very-Dark-Grayish-Blue-Light: #484b6a;
+
+// Dark Theme
+$Very-Dark-Blue: #161722;
+$Very-Dark-Desaturate-Blue: #25273c;
+$Light-Grayish-Blue: #cacde8;
+$Light-Grayish-Blue-hover: #e4e5f1;
+$Dark-Grayish-Blue: #777a92;
+$Very-Dark-Grayish-Blue: #4d5066;
+$Very-Dark-Grayish-Blue: #393a4c;
+
+@mixin media-xl {
+ @media only screen and (min-width: 1280px) {
+  @content;
+ }
+}
+
+@mixin media-md {
+ @media only screen and (min-width: 768px) {
+  @content;
+ }
+}
+
+@mixin media-sm {
+ @media only screen and (max-width: 360px) {
+  @content;
+ }
+}

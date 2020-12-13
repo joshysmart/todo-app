@@ -1,0 +1,18 @@
+@import "config";
+@import "todo-header";
+@import "todo-section";
+
+* {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Josefin Sans', sans-serif;
+ background: $Very-Dark-Blue;
+}
+
+.body-ligh {
+ background: $Very-Light-Gray;
+}
