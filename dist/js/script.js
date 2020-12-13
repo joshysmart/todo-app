@@ -205,7 +205,3 @@ function getAfterElement(y) {
 }
 
 todoWrapper.addEventListener('dragover', reoderElement);
-
-
-
-// 4689 3170 12 fcmb cuurent
