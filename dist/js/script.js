@@ -144,9 +144,6 @@ Todo App Init Items
 
 function initItems() {
  const todoItems = todoWrapper.querySelectorAll('.todo-item');
- const todoItemsStorage = [...todoItems] 
- console.log(todoItemsStorage);
- localStorage.setItem('items', JSON.stringify(todoItemsStorage));
  const itemsCount = document.querySelector('.items-count');
  const closeButtons = todoWrapper.querySelectorAll('.close');
  
