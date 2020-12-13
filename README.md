@@ -27,4 +27,4 @@ Users should be able to:
 
 The designs were given in JPG static format. This meant that needed to use my best judgment for styles such as `font-size`, `padding` and `margin`. This should helped train my eye to perceive differences in spacings and sizes.
 
-You can find my complete solution [here]()
+You can find my complete solution [here](https://www.frontendmentor.io/solutions/todo-app-built-using-sass-QEHWzBD8U)
