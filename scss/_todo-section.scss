@@ -1,6 +1,5 @@
 .todo-section {
  width: 100%;
- min-height: calc(100vh - 200px);
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -14,7 +13,6 @@
  }
 
  @include media-md {
-  min-height: calc(100vh - 300px);
   padding: 0;
   align-items: center;
   justify-content: center;
@@ -97,7 +95,6 @@
   width: 100%;
   position: relative;
   top: -1.8rem;
-  // background: $Very-Dark-Desaturate-Blue;
   border-radius: 5px;
   transition: all .4s ease-in-out;
 

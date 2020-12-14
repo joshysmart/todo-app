@@ -11,8 +11,9 @@ body {
  padding: 0;
  font-family: 'Josefin Sans', sans-serif;
  background: $Very-Dark-Blue;
+ transition: all .4s ease-in-out;
 }
 
-.body-ligh {
+.body-light {
  background: $Very-Light-Gray;
 }

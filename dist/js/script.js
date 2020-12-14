@@ -6,8 +6,9 @@ const todoHeader = document.querySelector('.todo-header');
 const todoSection = document.querySelector('.todo-section');
 
 function toggleTheme(e) {
- todoHeader.classList.toggle('todo-header-light')
- todoSection.classList.toggle('todo-section-light')
+ todoHeader.classList.toggle('todo-header-light');
+ todoSection.classList.toggle('todo-section-light');
+ document.body.classList.toggle('body-light');
 }
 
 toggleButton.addEventListener('click', toggleTheme);
@@ -164,12 +165,12 @@ function initItems() {
  closeButtons.forEach(closeButton => closeButton.addEventListener('click', removeItem));
  
  todoItems.forEach((todoItem, i) => {
-   todoItem.setAttribute('draggable', true);
+  todoItem.setAttribute('draggable', true);
   todoItem.addEventListener('dragstart', (e) => {
-    e.target.classList.add('dragging'); 
+   e.currentTarget.classList.add('dragging'); 
   }); 
   todoItem.addEventListener('dragend', (e) => {
-    e.target.classList.remove('dragging'); 
+   e.currentTarget.classList.remove('dragging'); 
   }); 
   
   const todoItemLabel = todoItem.querySelector('label');
