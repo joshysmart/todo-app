@@ -252,6 +252,8 @@
   left: 1.2rem;
   border: 1px solid #393a4c;
   border-radius: 50%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 @media only screen and (max-width: 360px) {

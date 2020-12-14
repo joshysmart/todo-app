@@ -74,6 +74,7 @@
     left: 1.2rem;
     border: 1px solid $Very-Dark-Grayish-Blue;
     border-radius: 50%;
+    transition: all .4s ease-in-out;
 
     @include media-sm {
      width: 14px;
