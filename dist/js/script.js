@@ -205,10 +205,11 @@ function reoderElement(e) {
  const draggedElement = todoWrapper.querySelector('.dragging'); 
 
  if(!afterElement) {
-  todoWrapper.appendChild(draggedElement) 
+  todoWrapper.appendChild(draggedElement);
  } else {
-  todoWrapper.insertBefore(draggedElement, afterElement); 
+  todoWrapper.insertBefore(draggedElement, afterElement);
  }
+ initItems(); 
 }
 
 function getAfterElement(y) {
