@@ -276,6 +276,8 @@
   position: relative;
   top: -1.8rem;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 3rem 5rem -1rem #161722;
+          box-shadow: 0px 3rem 5rem -1rem #161722;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -503,8 +505,8 @@
 .todo-section .todo-list .todo-item .close img {
   width: 100%;
   height: 100;
-  -webkit-transition: background .4s ease-in-out;
-  transition: background .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .todo-section .todo-list .display {
@@ -533,6 +535,9 @@
           justify-content: space-between;
   position: relative;
   padding: 1rem 0;
+  background: #25273c;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .todo-section .todo-list .todo-options p {
@@ -568,6 +573,8 @@
   bottom: -4rem;
   padding: 1rem 0;
   background: #25273c;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -575,7 +582,6 @@
     width: auto;
     position: static;
     padding: 0;
-    background: 0;
   }
 }
 
@@ -622,7 +628,6 @@
 }
 
 .todo-section-light .todo-list {
-  background: #fafafa;
   -webkit-box-shadow: 0px 3rem 5rem -1rem #e4e5f1;
           box-shadow: 0px 3rem 5rem -1rem #e4e5f1;
 }
@@ -656,6 +661,14 @@
 
 .todo-section-light .todo-list .todo-item label input:checked ~ .text {
   color: #d2d3db;
+}
+
+.todo-section-light .todo-list .todo-options {
+  background: #fafafa;
+}
+
+.todo-section-light .todo-list .todo-options .items-filter {
+  background: #fafafa;
 }
 
 * {
