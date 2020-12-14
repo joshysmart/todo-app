@@ -97,7 +97,7 @@
   width: 100%;
   position: relative;
   top: -1.8rem;
-  background: $Very-Dark-Desaturate-Blue;
+  // background: $Very-Dark-Desaturate-Blue;
   border-radius: 5px;
   transition: all .4s ease-in-out;
 
@@ -132,11 +132,11 @@
    display: flex;
    align-items: center;
    position: relative;
-   transition: all .4s ease-in-out;
    user-select: none;
    border-bottom: 1px solid $Very-Dark-Grayish-Blue;
    background: $Very-Dark-Desaturate-Blue;
    outline: 0;
+   transition: all .4s ease-in-out;
 
    @include media-md {
     padding: 1.2rem 0;
@@ -296,11 +296,6 @@
    transform: translate(-60%);
   }
   
-  .filter {
-   opacity: 0;
-   // transform: scale(0);
-  }
-
   .dragging {
    opacity: 0;
    cursor: move;

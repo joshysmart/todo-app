@@ -277,7 +277,6 @@
   width: 100%;
   position: relative;
   top: -1.8rem;
-  background: #25273c;
   border-radius: 5px;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -323,8 +322,6 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -332,6 +329,8 @@
   border-bottom: 1px solid #393a4c;
   background: #25273c;
   outline: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -517,10 +516,6 @@
 .todo-section .todo-list .translate {
   -webkit-transform: translate(-60%);
           transform: translate(-60%);
-}
-
-.todo-section .todo-list .filter {
-  opacity: 0;
 }
 
 .todo-section .todo-list .dragging {
