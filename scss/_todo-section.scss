@@ -156,34 +156,35 @@
     cursor: url('../images/cursor.svg'), auto;
     user-select: none;
 
-    &:hover {
-     .checked::before {
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      content: '';
-      background-image: $Check-Background;
-      border-radius: 50%;
-     }
-     .checked::after {
-      width: 22px;
-      height: 22px;
-      position: absolute;
-      content: '';
-      border-radius: 50%;
-      background: $Very-Dark-Desaturate-Blue;
-     }
-
-     input:checked ~ .checked {
-      &::before {
-       z-index: -30;
+    @include media-xl {
+     &:hover {
+      .checked::before {
+       width: 24px;
+       height: 24px;
+       position: absolute;
+       content: '';
+       background-image: $Check-Background;
+       border-radius: 50%;
       }
-      &::after {
-       z-index: -30;
+      .checked::after {
+       width: 22px;
+       height: 22px;
+       position: absolute;
+       content: '';
+       border-radius: 50%;
+       background: $Very-Dark-Desaturate-Blue;
+      }
+      input:checked ~ .checked {
+       &::before {
+        z-index: -30;
+       }
+       &::after {
+        z-index: -30;
+       }
       }
      }
     }
-    
+       
     .checked {
      width: 22px;
      height: 22px;
@@ -341,6 +342,7 @@
      position: static;
      padding: 0;
     }
+
     button {
      font-size: .85rem;
     }

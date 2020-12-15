@@ -360,31 +360,30 @@
           user-select: none;
 }
 
-.todo-section .todo-list .todo-item label:hover .checked::before {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  content: '';
-  background-image: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
-  background-image: linear-gradient(to right, #57ddff, #c058f3);
-  border-radius: 50%;
-}
-
-.todo-section .todo-list .todo-item label:hover .checked::after {
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  content: '';
-  border-radius: 50%;
-  background: #25273c;
-}
-
-.todo-section .todo-list .todo-item label:hover input:checked ~ .checked::before {
-  z-index: -30;
-}
-
-.todo-section .todo-list .todo-item label:hover input:checked ~ .checked::after {
-  z-index: -30;
+@media only screen and (min-width: 1280px) {
+  .todo-section .todo-list .todo-item label:hover .checked::before {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    content: '';
+    background-image: -webkit-gradient(linear, left top, right top, from(#57ddff), to(#c058f3));
+    background-image: linear-gradient(to right, #57ddff, #c058f3);
+    border-radius: 50%;
+  }
+  .todo-section .todo-list .todo-item label:hover .checked::after {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background: #25273c;
+  }
+  .todo-section .todo-list .todo-item label:hover input:checked ~ .checked::before {
+    z-index: -30;
+  }
+  .todo-section .todo-list .todo-item label:hover input:checked ~ .checked::after {
+    z-index: -30;
+  }
 }
 
 .todo-section .todo-list .todo-item label .checked {
