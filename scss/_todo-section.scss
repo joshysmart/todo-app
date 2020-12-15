@@ -295,9 +295,11 @@
    transform: translate(-60%);
   }
   
-  .dragging {
-   opacity: 0;
-   cursor: move;
+  @include media-xl {
+   .dragging {
+    opacity: 0;
+    cursor: move;
+   }
   }
 
   .todo-options {
