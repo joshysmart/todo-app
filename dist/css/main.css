@@ -520,9 +520,11 @@
           transform: translate(-60%);
 }
 
-.todo-section .todo-list .dragging {
-  opacity: 0;
-  cursor: move;
+@media only screen and (min-width: 1280px) {
+  .todo-section .todo-list .dragging {
+    opacity: 0;
+    cursor: move;
+  }
 }
 
 .todo-section .todo-list .todo-options {
